@@ -18,8 +18,8 @@ A collaborative e-commerce application built with a microservice/modular archite
 
 | Role | Module Focus | Primary Files / Responsibilities |
 | :--- | :--- | :--- |
-| **Person A** | Core Models & Domain Logic | • **`model/`**: `Product.java`, `Customer.java`, `OrderItem.java`, `Order.java`<br>• **`service/`**: `InventoryService.java`, `OrderService.java` |
-| **Person B** | Payment Integrations & Main Flow | • **`payment/`**: `PaymentMethod.java`, `CreditCardPayment.java`, `EWalletPayment.java`<br>• **`Main.java`**: Application setup, scenario testing, end-to-end flow |
+| **v/s** | Core Models & Domain Logic | • **`model/`**: `Product.java`, `Customer.java`, `OrderItem.java`, `Order.java`<br>• **`service/`**: `InventoryService.java`, `OrderService.java` |
+| **v/s** | Payment Integrations & Main Flow | • **`payment/`**: `PaymentMethod.java`, `CreditCardPayment.java`, `EWalletPayment.java`<br>• **`Main.java`**: Application setup, scenario testing, end-to-end flow |
 
 ---
 
@@ -47,6 +47,15 @@ To keep the codebase clean and avoid integration conflicts, both developers must
 * **`PaymentMethod.java`**: `boolean processPayment(double amount)`, `String getTransactionStatus()`
 * **`InventoryService.java`**: `checkStock(String productId, int quantity)`, `reduceStock(String productId, int quantity)`
 * **`OrderService.java`**: `createOrder(Customer customer, List<OrderItem> items)`, `processOrderPayment(Order order, PaymentMethod method)`
+
+## Git cheat sheet
+  
+* `git clone -b <branch-name> <repository-url>`
+* `git clone <repository-url> -> cd <repo-folder> -> git checkout <branch-name>`
+* `git checkout -b <new-branch-name>`
+* `git add <path/to/file-or-folder>`
+* `git commit -m "Add payment implementation files"`
+* `git push -u origin <branch-name>`
 
 ## 📂 Repository Structure
 
